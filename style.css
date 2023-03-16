@@ -10,6 +10,31 @@
   justify-content: space-between;  
 }
 
+.navbar-nav li a{
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar-nav li a:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;/*Ancho de subrayado*/
+  width: 100%;
+  background: #0933a8;
+  /*animacion de derecha a izquierda*/
+  transform-origin: right;
+  transform: scaleX(0);/*Desaparece linea*/
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-nav li a:hover:after{
+  transform-origin: left;/*Origen de subrayado*/
+  transform: scaleX(1);
+}
+
 /* Estilos generales */
 
 section {
@@ -212,6 +237,7 @@ h2{
 .articulos {
   min-height: 500px;
   padding: 30px;
+  
 }
 
 .articulos .card {
@@ -223,6 +249,32 @@ h2{
 .articulos .card-header {
   font-weight: bold;
 }
+
+.list-group a{
+  position: relative;
+  text-decoration: none;
+}
+
+.list-group a:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;/*Ancho de subrayado*/
+  width: 100%;
+  background: #0933a8;
+  /*animacion de derecha a izquierda*/
+  transform-origin: right;
+  transform: scaleX(0);/*Desaparece linea*/
+  transition: transform 0.2s ease-in-out;
+}
+
+.list-group a:hover:after{
+  transform-origin: left;/*Origen de subrayado*/
+  transform: scaleX(1);
+}
+
 
 /* Testimonios */
 
